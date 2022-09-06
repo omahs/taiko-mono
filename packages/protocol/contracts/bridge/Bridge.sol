@@ -34,7 +34,10 @@ abstract contract Bridge {
 
     /* ========== Functions ========== */
 
-    function deposit(address recipient, uint256 amount) public payable {
+    // receive() function? should we store account balances on each bridge? or vault tracks based on
+    // emitted data?
+
+    function deposit(address recipient, uint256 amount) external payable {
         // credit the amount received? again similar to Hop design perhaps
         emit FundsDeposited(msg.sender, recipient, amount);
     }
