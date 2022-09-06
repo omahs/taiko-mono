@@ -8,6 +8,11 @@
 // ╱╱╰╯╰╯╰┻┻╯╰┻━━╯╰━━━┻╯╰┻━━┻━━╯
 pragma solidity ^0.8.9;
 
+// Do we need to have our own wrapped tokens on our own chain to mint ether to users in an atomic swap?
+
+// for Native Token Bridge we want to implement lock and mint from L1 to L2, burn and transfer from L2
+// to L1.
+
 // Interface for both L1 and L2 bridges, should have abstract functions
 abstract contract Bridge {
     /* ========== Events ========== */
